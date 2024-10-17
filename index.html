@@ -4,14 +4,232 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form id="user-data" class="form">
+
+    <form id="user-data" class="form ">
+        <div class="main">
+            <div class="form-container">
+                <div class="header">
+                    <h1 class="form-h1">Want A Resume ?</h1>
+                    <h2 class="form-h2">Well, provide your details below and we'll make a resume out of it.</h2>
+                </div>
+                <h3 class="form-h3">Provide Contact Details</h3>
+        <div class="contact-details section">
+            <div>
         <label for="full-name">Full Name</label>
         <input type="text" id="full-name">
-        <button id="submit" onclick="showData()">Generate</button>
-    </form>
-    <div id="resume"></div>
+    </div>
+        <div class="">
+            <label for="title">Title</label>
+            <input type="text" id="title" required>
+        </div>
+        <div class="">
+            <label for="phone-number">Phone No: </label>
+            <input type="text" id="phone-number" required>
+        </div>
+        <div class="|">
+            <label for="email">Email: </label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="">
+            <label for="address">Address: </label>
+            <input type="text" id="address" required>
+        </div>
+        <div class="">
+            <label for="github">GitHub: </label>
+            <input type="url" id="github" required>
+        </div>
+        <div class="">
+            <label for="linkedin">LinkedIn: </label>
+            <input type="url" id="linkedin" required>
+        </div>
+    </div>
+        <h3 class="form-h3">Tell Us About Yourself</h3>
+        <div class="about-section">
+            <label for="about">About Yourself:</label>
+            <textarea id="about" required></textarea>
+        </div>
+        <h3 class="form-h3">Provide your 10 best skills</h3>
+        <div class="skills-grid">
+            <div class="">
+                <label for="skill1">Skill 1: </label>
+                <input type="text" id="skill1" required>
+            </div>
+            <div class="">
+                <label for="skill2">Skill 2: </label>
+                <input type="text" id="skill2" required>
+            </div>
+            <div class="">
+                <label for="skill3">Skill 3: </label>
+                <input type="text" id="skill3" required>
+            </div>
+            <div class="">
+                <label for="skill4">Skill 4: </label>
+                <input type="text" id="skill4" required>
+            </div>
+            <div class="">
+                <label for="skill5">Skill 5: </label>
+                <input type="text" id="skill5" required>
+            </div>
+            <div class="">
+                <label for="skill6">Skill 6: </label>
+                <input type="text" id="skill6" required>
+            </div>
+            <div class="">
+                <label for="skill7">Skill 7: </label>
+                <input type="text" id="skill7" required>
+            </div>
+            <div class="">
+                <label for="skill8">Skill 8: </label>
+                <input type="text" id="skill8" required>
+            </div>
+            <div class="">
+                <label for="skill9">Skill 9: </label>
+                <input type="text" id="skill9" required>
+            </div>
+            <div class="">
+                <label for="skill10">Skill 10: </label>
+                <input type="text" id="skill10" required>
+            </div>
+        </div>
+        <h3 class="form-h3">Tell Us About Your Experience</h3>
+        <div class="grid-experience-section">
+            <div class="">
+                <label for="position">Your Position: </label>
+                <input type="text" id="position" required>
+            </div>
+            <div class="">
+                <label for="company">Company:</label>
+                <input type="text" id="company" required>
+            </div>
+        </div>
+        <h3 class="form-h3">Tell your contributions in the company within four points</h3>
+        <div class="grid-contribution-section">
+            <div class="">
+                <label for="point1">Point 1: </label>
+                <input type="text" id="point1" required>
+            </div>
+            <div class="">
+                <label for="point2">Point 2: </label>
+                <input type="text" id="point2" required>
+            </div>
+            <div class="">
+                <label for="point3">Point 3: </label>
+                <input type="text" id="point3" required>
+            </div>
+            <div class="">
+                <label for="point4">Point 4: </label>
+                <input type="text" id="point4" required>
+            </div>
+        </div>
+        <h3 class="form-h3">Provide Your Education Details</h3>
+        <div class="grid-education-section">
+            <div class="">
+                <label for="uni">University Name: </label>
+                <input type="text" id="uni" required>
+            </div>
+            <div class="">
+                <label for="uni-course">Degree Name: </label>
+                <input type="text" id="uni-course" required>
+            </div>
+            <div class="">
+                <label for="college">College Name: </label>
+                <input type="text" id="college" required>
+            </div>
+            <div class="">
+                <label for="college-major">College Major: </label>
+                <input type="text" id="college-major" required>
+            </div>
+        </div>
+    <button id="submit" class="generate-btn">Generate Resume</button>
+
+</div>
+</div>
+</form>
+
+
+<!-- ------------------------------------------------------------------------------------------ -->
+
+    <div id="resume" class="resume-hidden">
+        <div class="main">     
+            <div class="outer">
+                <div class="container">
+                    <div class="header">
+                        <h1 id="resume-full-name">Huzair Ahmed Khan</h1>
+                        <h2 id="resume-title">Frontend Developer</h2>
+                    </div>
+                    <div class="grid">
+                        <div class="grid-col-contact span-2 max-width-col">
+                            <h3>CONT<span class="border-bottom">ACT</span></h3>
+                          <div class="flex">
+                            <p id="resume-phone-number">+9233122446</p>
+                            <img src="./images/phone.png" alt="" width="20px">
+                        </div>
+                        <div class="flex">
+                            <p id="resume-email">hak@gmail.com</p>
+                            <img src="./images/mail.png" alt="" width="20px">
+                        </div>
+                        <div class="flex">
+                            <a id="resume-address">Surjani Town Karachi</a>
+                            <img src="./images/location.png" alt="" width="20px">
+                        </div>
+                        <div class="flex">
+                            <a id="resume-github">GitHub</a>
+                            <img src="./images/github.png" alt="" width="20px">
+                        </div>
+                        <div class="flex">
+                            <a id="resume-linkedin">LinkedIn</a>
+                            <img src="./images/linkedin.png" alt="" width="20px">
+                        </div>
+                          </div>
+    
+                        <div class="grid-col-about resume-about-width span-4">
+                            <h3>ABOUT <span class="border-bottom">ME</span></h3>
+                            <p id="resume-about" class="">I am a dedicated front-end web developer passionate about creating responsive and user-friendly web applications. With hands-on experience in React, Next.js, and Tailwind CSS, I specialize in building dynamic, component-driven interfaces that prioritize both functionality and design. My recent projects have involved transforming Figma designs into optimized, fully responsive websites while maintaining best practices in code architecture. </p>
+                        </div>
+                        <div class="grid-col-skills span-2">
+                            <h3>SKI<span class="border-bottom">LLS</span></h3>
+                            <div class="grid-cols-2">
+                                <li id="resume-skill1" >HTML</li>
+                                <li id="resume-skill2">CSS</li>
+                                <li id="resume-skill3">Tailwind</li>
+                                <li id="resume-skill4">JavaScript</li>
+                                <li id="resume-skill5">TypeScript</li>
+                                <li id="resume-skill6">REACT</li>
+                                <li id="resume-skill7">NextJs</li>
+                                <li id="resume-skill8">Python</li>
+                                <li id="resume-skill9">Prompt Engineering</li>
+                                <li id="resume-skill10">Docker Container</li>
+                            </div>
+                        </div>
+                        <div class="grid-col-experience span-4">
+                            <h3>EXPERIE<span class="border-bottom">NCE</span></h3>
+                            <h4 id="resume-position">INTERN</h4>
+                            <P class="institute" id="resume-company">NexNoor - Remote - Sep 2024 - Present</P>
+                            <p id="resume-point1">- Developed a crypto wallet for the company.</p>
+                            <p id="resume-point2">- With sleek and modern UI.</p>
+                            <p id="resume-point3">- Implemented cross-platform responsiveness.</p>
+                            <p id="resume-point4">- Connected Api's and live charts.</p>
+                            
+                        </div>
+                        <div class="grid-col-education span-4">
+                            <h3>EDUCA<span class="border-bottom">TION</span></h3>
+                            <P class="institute" id="resume-uni">GIAIC - Governor House - Feb 2024 - Feb 2026</P>
+                            <p id="resume-uni-course">- Cloud Native Applied GenAi Eng</p>
+                            <P class="institute" id="resume-college">PIAC - Bahria Auditorium - August 2024 - Aug 2026</P>
+                            <p id="resume-college-major">- Building Custom GPTs and Agentic AI</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="/index.js"></script>
 </body>
 </html>

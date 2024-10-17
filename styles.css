@@ -1,0 +1,295 @@
+.resume-hidden{
+    display: none;
+}
+
+.form-container{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.3); 
+    
+}
+.section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+textarea{
+    width: 100%;
+    padding: 8px;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+}
+.about-section{
+    width: 80%;
+    margin: 0 auto;
+}
+.resume-about-width{
+    word-wrap: break-word;
+}
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.grid-experience-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid-contribution-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.grid-education-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media(max-width:1000px){
+    .section{
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 2rem;
+    }   
+    
+.skills-grid{
+    grid-template-columns: repeat(3,1fr);
+}
+}
+@media(max-width:786px){
+    .section{
+        grid-template-columns:1fr;
+        margin-bottom: 2rem;
+    }
+    .skills-grid{
+        grid-template-columns: repeat(2,1fr);
+    }   
+    .grid-education-section{
+        grid-template-columns: 1fr;
+    }
+}
+label{
+    display: block;
+}
+
+input{
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;;
+}
+
+.form-h1{
+    margin-bottom: 0.6rem;
+}
+.form-h2{
+    margin-bottom: 2rem;
+}
+.form-h3{
+    text-align: center;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+.generate-btn{
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.generate-btn:hover{
+    background-color:#ddd ;
+}
+/* styles for generated resume */
+
+/* ---------------------------------------------------------------------------- */
+
+*{box-sizing: border-box; margin: 0;padding: 0;}
+
+body{
+    font-family: "Inter", "sans-serif";
+    color: #000000;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.outer{
+    width: 60%;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.3);
+    padding: 0.8rem 0;        
+}
+
+.header{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+h2{
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+h3{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+h4{
+    font-size: 1rem;
+    font-weight: 600;
+}
+h4,p{
+    padding-bottom: 0.5rem;
+}
+h3{
+    padding-bottom: 1rem;
+}
+.institute{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+p{
+    font-size: 0.9rem;
+}
+li{
+    padding-bottom: 0.5rem;
+}
+
+.border-bottom{
+    border-bottom: 4px solid rgb(23, 22, 22);
+}
+
+.grid{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap:1.2rem;
+}
+
+.span-2{
+    grid-column: span 4;
+}
+
+.span-4{
+    grid-column: span 8;
+}
+
+@media (max-width:768px) {
+    .span-2,.span-4{
+        grid-column: span 6;
+    } 
+    h1{
+        font-size: 2.2rem;
+    }
+
+    .outer{
+        width: 80%;
+    }
+}
+
+@media (max-width:520px) {
+    .span-2,.span-4{
+        grid-column: span 12;
+    } 
+}
+
+.grid-col-skills{
+    grid-row: span 2;
+}
+
+.grid-col-experience{
+    border-bottom: 3px solid rgb(23, 22, 22);
+    
+}
+.grid-col-contact{
+    border-bottom: 3px solid rgb(23, 22, 22);
+}
+
+.grid-col-about{
+    max-width: 500px;
+    line-height: 1.2;
+    border-bottom: 3px solid rgb(23, 22, 22);
+    padding-bottom: 1rem;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.max-width-col{
+    width: 100%;
+    max-width: 200px;
+}
+
+.flex>a,p{
+    font-size: 0.9rem;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.grid-cols-2{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 0.5rem;
+}
+
+.grid-cols-2>h5{
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width:520px) {
+    .grid-cols-2{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+button{
+    background-color: #F2F2F2;
+    border: none;
+    font-family: "Inter", "sans-serif";
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+    
+}
+
+button:hover{
+    transform: scale(1.05);
+}
